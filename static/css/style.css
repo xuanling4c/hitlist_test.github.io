@@ -198,16 +198,6 @@ h1 {
     text-align: center
 }
 
-p {
-    text-align: center;
-    margin: 0;
-    padding-top: 10px;
-    opacity: 1;
-    transform: translate(0);
-    transition: all 300ms linear;
-    transition-delay: 1700ms
-}
-
 body.hero-anime p {
     opacity: 0;
     transform: translateY(40px);
@@ -489,7 +479,6 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         content: "";
         border: 0;
         background-color: #000;
-        vertical-align: 0
     }
 
     .dropdown-toggle::after {
@@ -502,7 +491,6 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         content: "";
         border: 0;
         background-color: #000;
-        vertical-align: 0;
         transition: all 200ms linear
     }
 
@@ -520,7 +508,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
     .dropdown-toggle[aria-expanded="true"]+.dropdown-menu {
         margin-top: 10px !important;
-        margin-bottom: 20px !important
+        margin-bottom: 20px !important;
     }
 
     body.dark .nav-item::before {
@@ -535,27 +523,6 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         background-color: transparent;
         box-shadow: none
     }
-}
-
-.logo {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    display: block;
-    z-index: 100;
-    transition: all 250ms linear
-}
-
-.logo img {
-    height: 26px;
-    width: auto;
-    display: block;
-    filter: brightness(10%);
-    transition: all 250ms linear
-}
-
-body.dark .logo img {
-    filter: brightness(100%)
 }
 
 body div h2,h4{
