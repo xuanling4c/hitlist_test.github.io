@@ -37,10 +37,29 @@ var body_e = document.getElementsByTagName('body')[0];
     fetch('static/nums.json')
     .then(response => response.json())
     .then(data => {
-        const chartData = data.map(item => ({
-            x:new Date(item.date),
-            y:item.num
-        }))
+        const chartData = [
+            {
+              name: 'history',
+              data: data.map(item => ({
+                x: new Date(item.d),
+                y: item.h
+              }))
+            },
+            {
+              name: 'gap',
+              data: data.map(item => ({
+                x: new Date(item.d),
+                y: item.g
+              }))
+            },
+            {
+              name: 'stable',
+              data: data.map(item => ({
+                x: new Date(item.d),
+                y: item.s
+              }))
+            }
+          ];
 
         const chartOptions = {
             chart: {
@@ -53,10 +72,7 @@ var body_e = document.getElementsByTagName('body')[0];
                     enabled: true
                 }
             },
-            series:[{
-                name:'responsive IPv6 addresses',
-                data:chartData
-            }],
+            series: chartData,
             xaxis: {
                 type: 'datetime',
                 datetimeFormatter: {},
