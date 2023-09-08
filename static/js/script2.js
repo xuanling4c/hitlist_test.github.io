@@ -40,6 +40,7 @@ var body_e = document.getElementsByTagName('body')[0];
         const chartData = [
             {
               name: 'history',
+              color: '#008000',
               data: data.map(item => ({
                 x: new Date(item.d),
                 y: item.h
@@ -47,6 +48,7 @@ var body_e = document.getElementsByTagName('body')[0];
             },
             {
               name: 'gap',
+              color: '#FFA500',
               data: data.map(item => ({
                 x: new Date(item.d),
                 y: item.g
@@ -54,6 +56,7 @@ var body_e = document.getElementsByTagName('body')[0];
             },
             {
               name: 'stable',
+              color: '#00FF00',
               data: data.map(item => ({
                 x: new Date(item.d),
                 y: item.s
